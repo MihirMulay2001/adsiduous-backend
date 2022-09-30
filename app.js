@@ -17,7 +17,7 @@ const adsinfo = require("./src/routes/adsInfo");
 app.use(express.json());
 app.use("/ads", adsinfo);
 
-app.listen(4444, async () => {
+app.listen(process.env.PORT || 4444, async () => {
   console.log("server hosted on local host 3000");
   console.log("database connected");
 });
