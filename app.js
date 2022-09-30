@@ -1,5 +1,4 @@
 const express = require("express");
-// const cookieParser = require("cookie-parser");
 const cors = require("cors");
 // const authMiddleware = require("./middleware/auth-middleware");
 // app.use("/", authMiddleware);
@@ -11,9 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 const adsinfo = require("./src/routes/adsInfo");
-
-// const users = require("./routes/user_route");
-// const remixedsongs = require("./routes/remixedsong_route");
 
 app.use(express.json());
 app.use("/ads", adsinfo);
